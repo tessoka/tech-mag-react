@@ -1,0 +1,211 @@
+.lmask {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    opacity: 0.8;
+}
+.lmask.fixed {
+    position: fixed;
+}
+.lmask:before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px solid #cf7a2f;
+    opacity: 0.9;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    box-shadow: 0 0 35px #dc9d66;
+    width: 50px;
+    height: 50px;
+    -moz-animation: spinPulse 1s infinite ease-in-out;
+    -webkit-animation: spinPulse 1s infinite linear;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.lmask:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px solid #cf7a2f;
+    opacity: 0.9;
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    box-shadow: 0 0 15px #dc9d66;
+    width: 30px;
+    height: 30px;
+    -moz-animation: spinoffPulse 1s infinite linear;
+    -webkit-animation: spinoffPulse 1s infinite linear;
+    margin: -15px 0 0 -15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@-moz-keyframes spinPulse {
+    0% {
+        -moz-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #dc9d66;
+   }
+    50% {
+        -moz-transform: rotate(145deg);
+        opacity: 1;
+   }
+    100% {
+        -moz-transform: rotate(-320deg);
+        opacity: 0;
+   }
+}
+@-moz-keyframes spinoffPulse {
+    0% {
+        -moz-transform: rotate(0deg);
+   }
+    100% {
+        -moz-transform: rotate(360deg);
+   }
+}
+@keyframes spinPulse {
+    0% {
+        -webkit-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #dc9d66;
+   }
+    50% {
+        -webkit-transform: rotate(145deg);
+        opacity: 1;
+   }
+    100% {
+        -webkit-transform: rotate(-320deg);
+        opacity: 0;
+   }
+}
+@keyframes spinoffPulse {
+    0% {
+        -webkit-transform: rotate(0deg);
+   }
+    100% {
+        -webkit-transform: rotate(360deg);
+   }
+}
+
+
+
+
+/* ------------------------------------ SUBSCRIBE ------------------------------------- */
+  
+  .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button{
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 65%);
+    
+    width: 200px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    background: #cf7a2f;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  
+  .button:hover{
+    background: #ffffff;
+    color: #cf7a2f;
+    border: 3px solid #cf7a2f;
+  }
+  
+  .button span{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  
+  .success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #cf7a2f;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+}
+
+.success svg{
+    width: 20px;
+    height: 20px;
+    fill: rgb(255, 255, 255);
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+  }
+  
+  .button.is_active{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #cf7a2f;
+  }
+  
+  .button.is_active .success{
+    opacity: 1;
+    visibility: visible;
+    /* border: 1px solid red; */
+}
+
+.button.is_active .success svg{
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+  }
+  
+  .button.is_active span{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+
+  
+  .button-4 {
+    background-color: #cf7a2f;
+    border: 3px solid #cf7a2f;
+    color: #000000;
+    transition: .3s;
+  }
+  .button-4:hover {
+    animation: pulse 1s infinite;
+    transition: .3s;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(.9);
+    }
+      100% {
+      transform: scale(1);
+    }
+  }
