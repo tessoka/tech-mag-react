@@ -17,6 +17,7 @@ Application of an online newspaper - a tech-magazne, using API to fetch the news
 - Semantic HTML5 markup
 - CSS Grid
 
+## Images
 
 ### Landing Page
 ![tech-mag-react](https://github.com/tessoka/tech-mag-react/blob/006898ebe3ee561ff59dd52ff8c3de9c9b104b54/LandingPage.jpg)
